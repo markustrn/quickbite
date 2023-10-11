@@ -1,8 +1,14 @@
 from flask import Flask, request, jsonify
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
+
 
 app = Flask(__name__)
 
-API_KEY = 'AIzaSyAMgkgsxUqUtt16XJzcUPc0EUA-c_P8mUI'
+
 
 @app.route('/')
 def hello_world():  # put application's code here
@@ -11,3 +17,4 @@ def hello_world():  # put application's code here
 
 if __name__ == '__main__':
     app.run(debug=True)
+gi
